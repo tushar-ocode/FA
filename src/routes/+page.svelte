@@ -1,43 +1,15 @@
 <!-- index.svelte -->
 <script>
 	// You can import necessary components or define logic here
-	import DefaultLayout from '../layouts/Layout_fa.svelte';
+	import DefaultLayout from '../layouts/Layout_fa.svelte'
+    import Sidebar from '$lib/sidebar.svelte'
 
 </script>
 
-<DefaultLayout title="Home">
+<DefaultLayout title="Rings" buttonTitle="Create Ring">
 	<!-- Slot for sidebar content -->
 	<div slot="sidebar">
-		<div class="dahsboard-title">Forver Artisians</div>
-		<div class="dashboard-menu">
-			<ul>
-				<div class="items-wrapper">
-					<i class="material-symbols-outlined">home</i>
-					<li>Rings</li>
-				</div>
-
-				<div class="items-wrapper">
-					<i class="material-symbols-outlined">group</i>
-					<li>Users</li>
-				</div>
-				<div class="items-wrapper">
-					<i class="material-symbols-outlined">category</i>
-					<li>Categories</li>
-				</div>
-				<div class="items-wrapper">
-					<i class="material-symbols-outlined">sell</i>
-					<li>Tags</li>
-				</div>
-				<div class="items-wrapper">
-					<i class="material-symbols-outlined">account_circle</i>
-					<li>Manage Account</li>
-				</div>
-				<div class="items-wrapper">
-					<i class="material-symbols-outlined">logout</i>
-					<li>Logout</li>
-				</div>
-			</ul>
-		</div>
+        <Sidebar />
 	</div>
 	<!-- Main content -->
 	<div class="main-conatiner ">
@@ -111,51 +83,6 @@
 </DefaultLayout>
 
 <style>
-	.dahsboard-title {
-		position: relative;
-		z-index: 1;
-		border-bottom: 1px solid #9c0822;
-		height: 36px;
-		line-height: 23px;
-		width: 100%;
-		padding: 5px;
-		color: #ffffff;
-		text-align: center;
-		font-weight: 300;
-		font-family: sans-serif;
-	}
-
-	.dashboard-menu ul {
-		position: relative;
-		z-index: 1;
-		color: #ffffff;
-		padding: -1px;
-		font-weight: 300;
-		font-size: 14px;
-		line-height: 46px;
-		cursor: pointer;
-	}
-
-	.items-wrapper:hover{
-
-		background-color:#9c0822;
-	}
-
-	.dashboard-menu li {	
-		list-style-type: none;
-		font-family: sans-serif;
-	}
-
-	.items-wrapper {
-		display: flex;
-		flex-direction: row;
-		align-items: center;
-		gap: 10px;
-
-	}
-
-
-
 
   .main-conatiner{
     align-items: flex-start;

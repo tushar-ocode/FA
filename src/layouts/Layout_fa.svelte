@@ -1,6 +1,13 @@
 <!-- DefaultLayout.svelte -->
 <script>
-  export let title; // Prop to set the page title
+  /**
+	 * @type {any}
+	 */
+   export let title; // Prop to set the page title
+   /**
+	 * @type {any}
+	 */
+    export let buttonTitle;
 </script>
 
 <div class="wrapper">
@@ -14,8 +21,13 @@
         <div class="header">
           <!-- Header content goes here -->
           <div class="header--title">
-            Rings
-            <button class="action_btn">Create Ring</button>
+            {title}
+            <div class="ring-action">
+              <button class="action_btn">
+                <i class="material-symbols-outlined">add</i>
+                {buttonTitle}</button>
+            </div>
+
           </div>
         </div>  
         <div class="main-content">
@@ -72,6 +84,9 @@
     display: inline-block;
     text-decoration: none;
     margin: 0px 5px 0px 0px;
+    display: flex;
+    gap: 5px;
+    align-items: center;
   }
 
 
@@ -92,5 +107,12 @@
 
   .main-wrapper{
     width: 100%;
+  }
+
+  .ring-action{
+
+    display: flex;
+    gap: 5px;
+    align-items: center;
   }
 </style>
